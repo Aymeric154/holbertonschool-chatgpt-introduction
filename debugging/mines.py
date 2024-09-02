@@ -42,9 +42,9 @@ class Minesweeper:
 
     def reveal(self, x, y):
         if not (0 <= x < self.width and 0 <= y < self.height):
-            return True  # Ignore invalid coordinates
+            return True  
         if self.revealed[y][x]:
-            return True  # Ignore already revealed cells
+            return True 
         if (y * self.width + x) in self.mines:
             return False
         self.revealed[y][x] = True
